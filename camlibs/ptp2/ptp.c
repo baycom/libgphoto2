@@ -1129,6 +1129,39 @@ ptp_olympus_parse_output_xml(PTPParams* params, char*data, int len, xmlNodePtr *
 	}
 	return result;
 }
+#else
+uint16_t ptp_panasonic_liveview_image (PTPParams* params, unsigned char **data, unsigned int *size) 
+{
+	return PTP_ERROR_IO;
+}
+uint16_t ptp_panasonic_getdevicepropertysize (PTPParams *params, uint32_t propcode)
+{
+	return PTP_ERROR_IO;
+}
+uint16_t ptp_panasonic_setdeviceproperty (PTPParams* params, uint32_t propcode, unsigned char *value, uint16_t valuesize)
+{
+	return PTP_ERROR_IO;
+}
+uint16_t ptp_panasonic_getdevicepropertydesc (PTPParams *params, uint32_t propcode, uint16_t valuesize, uint32_t *currentValue, uint32_t **propertyValueList, uint32_t *propertyValueListLength)
+{
+	return PTP_ERROR_IO;
+}
+uint16_t ptp_panasonic_getdeviceproperty (PTPParams *params, uint32_t propcode, uint16_t *valuesize, uint32_t *currentValue)
+{
+	return PTP_ERROR_IO;
+}
+uint16_t ptp_olympus_init_pc_mode (PTPParams* params)
+{
+	return PTP_ERROR_IO;
+}
+uint16_t ptp_olympus_omd_capture (PTPParams* params)
+{
+	return PTP_ERROR_IO;
+}
+uint16_t ptp_olympus_liveview_image (PTPParams* params, unsigned char **data, unsigned int *size)
+{
+	return PTP_ERROR_IO;
+}
 #endif
 
 uint16_t
